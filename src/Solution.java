@@ -1,13 +1,14 @@
 import java.util.*;
 
-public class Solution{
+public class Main {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
 
-        String line = sc.nextLine().trim();  // remove extra spaces
-        String[] words = line.split("\\s+"); // handle multiple spaces
+        String line = sc.nextLine().trim();
+        String[] words = line.split("\\s+");
 
-        HashMap<String, Integer> map = new HashMap<>();
+        // Use TreeMap to auto sort keys
+        TreeMap<String, Integer> map = new TreeMap<>();
 
         for (String word : words) {
             map.put(word, map.getOrDefault(word, 0) + 1);
